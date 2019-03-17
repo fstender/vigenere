@@ -1,4 +1,5 @@
 def menue():
+    """Zeigt das Hauptmenü an"""
     print()
     print("1. Verschlüsseln")
     print("2. Entschlüsseln")
@@ -7,6 +8,7 @@ def menue():
 
 
 def vigenere(eingabe, schluessel, verschluesseln):
+    """Ver- oder entschlüsselt den Eingabetext mit dem übergebenen Schlüssel"""
     z = 0
     keyText = ''
     outputText = ''
@@ -35,10 +37,11 @@ def vigenere(eingabe, schluessel, verschluesseln):
 
 
 def verschluesseln():
+    """Fragt einen Text zum Verschlüsseln ab"""
     schluessel = str.upper(input("Schlüssel: "))
     klartext = str.upper(input("Klartext: "))
 
-    codeText, schluesselText = vigenere(klartext, schluessel, True)    
+    codeText, schluesselText = vigenere(klartext, schluessel, True)
     print()
     print('Klartext: ', klartext)
     print('Schlüssel:', schluesselText)
@@ -46,6 +49,7 @@ def verschluesseln():
 
 
 def entschluesseln():
+    """Fragt einen Text zum Entschlüsseln ab"""
     schluessel = str.upper(input("Schlüssel: "))
     code = str.upper(input("Code: "))
 
